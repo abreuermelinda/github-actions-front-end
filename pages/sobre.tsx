@@ -1,5 +1,9 @@
 import React from "react";
 
 export default function AboutScreen() {
-  return <h1>Sobre</h1>;
+  return (
+    <div>
+      <h1>Sobre</h1>
+    </div>
+  );
 }
