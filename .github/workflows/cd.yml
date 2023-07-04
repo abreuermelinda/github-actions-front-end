@@ -1,0 +1,20 @@
+name: "CD (Entrega/Delivery Continua): Main Workflow"
+
+env:
+  VERCEL_TOKEN: "algumvalor"
+  VERCEL_ORG_ID: "SrTnYFZSI44tbMqtlhN5wygq"
+  VERCEL_PROJECT_ID: "prj_HEKkskzl3sGpz3R5K3kwI1qdhtsk"
+
+on:
+  push:
+    branches: [master, a2.3]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3      
+      - name: Run Installation
+        run: npm install      
+      - name: Run Deploy
+        run: npm run deploy:prod

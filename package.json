@@ -9,6 +9,8 @@
     "start": "nest start",
     "lint": "next lint",
     "lint:fix": "next lint --fix",
+    "deploy:prod": "npm run deploy --prod --token=$VERCEL_TOKEN",
+    "deploy": "npm run build npx vercel ./build --confirm --no-clipboard",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
